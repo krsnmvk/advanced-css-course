@@ -28,17 +28,15 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-
 .header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-
 .header__logo {
   height: 3.5rem;
+  cursor: pointer;
 }
-
 .header__text-box {
   position: absolute;
   top: 40%;
@@ -53,7 +51,6 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
 }
-
 .heading-primary--main {
   display: block;
   font-size: 6rem;
@@ -61,13 +58,59 @@ body {
   letter-spacing: 3.5rem;
   animation: moveInLeft 1s ease-in 0.5s;
 }
-
 .heading-primary--sub {
   display: block;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1.74rem;
   animation: moveInRight 1s ease-in 0.5s;
+}
+
+.btn:visited, .btn:link {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0.5rem 1rem 2rem 0 rgba(0, 0, 0, 0.2);
+}
+.btn:hover::after {
+  transform: scaleX(1.3) scaleY(1.6);
+  opacity: 0;
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0.3rem 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+}
+.btn::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+.btn--white::after {
+  background-color: #fff;
+}
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
 }
 
 @keyframes moveInLeft {
@@ -105,60 +148,6 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  padding: 1.5rem 4rem;
-  border-radius: 10rem;
-  transition: all 0.2s;
-  position: relative;
-  font-size: 1.6rem;
-  font-weight: 500;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0.5rem 1rem 2rem 0 rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0.3rem 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
-}
-
-.btn::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.3) scaleY(1.6);
-  opacity: 0;
-}
-
-.btn--white {
-  background-color: #fff;
-  color: #777;
-}
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn--animated {
-  animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
 }
 
 /*# sourceMappingURL=style.css.map */
