@@ -1,17 +1,15 @@
-@use '../abstracts/variables';
-
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.6;
-  color: variables.$color-gray-dark;
+  color: $color-gray-dark;
   padding: 3rem;
   box-sizing: border-box;
 }
 
 .heading-primary {
-  color: variables.$color-white;
+  color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
