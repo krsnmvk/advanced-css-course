@@ -1,0 +1,26 @@
+{
+  "name": "advanced-css-course",
+  "version": "1.0.0",
+  "description": "",
+  "private": false,
+  "scripts": {
+    "sass:compile": "sass 01-natours/sass/main.scss 01-natours/css/style.css -w",
+    "sass:migrator": "sass-migrator module --migrate-deps 01-natours/sass/main.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krsnmvk/advanced-css-course.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/krsnmvk/advanced-css-course/issues"
+  },
+  "homepage": "https://github.com/krsnmvk/advanced-css-course#readme",
+  "devDependencies": {
+    "sass": "^1.92.1",
+    "sass-migrator": "^2.4.2"
+  }
+}
