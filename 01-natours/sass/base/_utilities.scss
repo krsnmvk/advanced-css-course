@@ -1,23 +1,31 @@
 .u-center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 .u-margin-botton-xs {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 
 .u-margin-botton-sm {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .u-margin-botton-md {
-  margin-bottom: 6rem;
+  margin-bottom: 6rem !important;
 }
 
 .u-margin-botton-lg {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
 }
 
 .u-margin-botton-xl {
-  margin-bottom: 10rem;
+  margin-bottom: 10rem !important;
+}
+
+.u-margin-top-lg {
+  margin-top: 8rem !important;
+}
+
+.u-margin-top-xl {
+  margin-top: 10rem !important;
 }
