@@ -4,7 +4,8 @@
   "description": "",
   "private": false,
   "scripts": {
-    "sass:compile": "sass 01-natours/sass/main.scss 01-natours/css/style.css -w",
+    "sass:natours": "sass 01-natours/sass/main.scss 01-natours/css/style.css -w",
+    "sass:trillo": "sass 02-trillo/sass/main.scss 02-trillo/css/style.css -w",
     "sass:migrator": "sass-migrator module --migrate-deps 01-natours/sass/main.scss"
   },
   "repository": {
