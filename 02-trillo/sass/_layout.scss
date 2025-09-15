@@ -19,13 +19,17 @@
     display: flex;
 
     .sidebar {
-      background-color: blue;
+      background-color: map-get($map: $colors, $key: grey-dark-1);
       flex: 0 0 18%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .hotel-view {
       background-color: chocolate;
       flex: 1;
+      height: 50rem;
     }
   }
 }
