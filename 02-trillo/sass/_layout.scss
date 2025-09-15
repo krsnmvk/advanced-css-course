@@ -1,0 +1,27 @@
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: map-get($colors, grey-light-2);
+  box-shadow: 0 2rem 6rem 0 rgba(0, 0, 0, 0.3);
+  min-height: 50rem;
+
+  .header {
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: map-get($colors, grey-light-2);
+  }
+
+  .content {
+    display: flex;
+
+    .sidebar {
+      background-color: blue;
+      flex: 0 0 18%;
+    }
+
+    .hotel-view {
+      background-color: chocolate;
+      flex: 1;
+    }
+  }
+}
