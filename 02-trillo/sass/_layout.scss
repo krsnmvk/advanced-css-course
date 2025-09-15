@@ -1,7 +1,7 @@
 .container {
   max-width: 120rem;
   margin: 8rem auto;
-  background-color: map-get($colors, grey-light-2);
+  background-color: #fff;
   box-shadow: 0 2rem 6rem 0 rgba(0, 0, 0, 0.3);
   min-height: 50rem;
 
@@ -9,7 +9,7 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: map-get($colors, grey-light-2);
+    border-bottom: 1px solid map-get($map: $colors, $key: grey-light-2);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +27,6 @@
     }
 
     .hotel-view {
-      background-color: chocolate;
       flex: 1;
       height: 50rem;
     }
