@@ -1,25 +1,26 @@
 {
-  "name": "advanced-css-course",
+  "name": "css-and-sass-course",
   "version": "1.0.0",
   "description": "",
   "private": false,
   "scripts": {
     "sass:natours": "sass 01-natours/sass/main.scss 01-natours/css/style.css -w",
     "sass:trillo": "sass 02-trillo/sass/main.scss 02-trillo/css/style.css -w",
+    "sass:nexter": "sass 03-nexter/sass/main.scss 03-nexter/css/style.css -w",
     "sass:migrator": "sass-migrator module --migrate-deps 01-natours/sass/main.scss"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krsnmvk/advanced-css-course.git"
+    "url": "git+https://github.com/krsnmvk/css-and-sass-course.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/krsnmvk/advanced-css-course/issues"
+    "url": "https://github.com/krsnmvk/css-and-sass-course/issues"
   },
-  "homepage": "https://github.com/krsnmvk/advanced-css-course#readme",
+  "homepage": "https://github.com/krsnmvk/css-and-sass-course#readme",
   "devDependencies": {
     "sass": "^1.92.1",
     "sass-migrator": "^2.4.2"
