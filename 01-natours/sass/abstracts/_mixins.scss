@@ -12,3 +12,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin respond($breakpoint) {
+  @if map-has-key($map: $breakpoints, $key: $breakpoint) {
+    $size: map-get(
+      $map: $breakpoints,
+      $key: $breakpoint,
+    );
+
+    @media (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{breakpoint}` not found in `$breakpoints` map.";
+  }
+}

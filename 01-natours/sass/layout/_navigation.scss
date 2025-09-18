@@ -1,7 +1,4 @@
 .navigation {
-  &__checkbox {
-  }
-
   &__button {
     background-color: $color-white;
     height: 7rem;
@@ -14,6 +11,16 @@
     box-shadow: 0 1rem 2rem 0 rgba($color-black, 0.2);
     text-align: center;
     cursor: pointer;
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background {
@@ -30,6 +37,16 @@
     );
     z-index: 5;
     transition: transform 0.8s cubic-bezier(0.62, 0.18, 0.27, 1.05);
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav {
