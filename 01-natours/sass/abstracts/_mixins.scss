@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "variables";
+
 @mixin clearfix {
   &::after {
     content: '';
@@ -14,13 +17,13 @@
 }
 
 @mixin respond($breakpoint) {
-  @if map-has-key($map: $breakpoints, $key: $breakpoint) {
-    $size: map-get(
-      $map: $breakpoints,
+  @if map.has-key($map: variables.$breakpoints, $key: $breakpoint) {
+    $size: map.get(
+      $map: variables.$breakpoints,
       $key: $breakpoint,
     );
 
-    @media (max-width: $size) {
+    @media only screen and (max-width: $size) {
       @content;
     }
   } @else {

@@ -1,3 +1,6 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 *,
 *::after,
 *::before {
@@ -9,15 +12,11 @@
 html {
   font-size: 62.5%;
 
-  @include respond(tab-land) {
+  @include mixins.respond(tab-land) {
     font-size: 56.25%;
   }
 
-  @include respond(tab-port) {
-    font-size: 50%;
-  }
-
-  @include respond(big-desktop) {
+  @include mixins.respond(tab-port) {
     font-size: 50%;
   }
 }
@@ -26,7 +25,12 @@ body {
   box-sizing: border-box;
   padding: 3rem;
 
-  @include respond(tab-port) {
+  @include mixins.respond(tab-port) {
     padding: 0;
   }
+}
+
+::selection {
+  background-color: variables.$color-primary;
+  color: variables.$color-white;
 }
