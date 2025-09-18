@@ -404,7 +404,19 @@
 
       <footer class="footer">
         <figure class="footer__logo-box u-margin-botton-lg">
-          <img src="img/logo-green-2x.png" alt="Logo" class="footer__logo" />
+          <picture class="footer__logo">
+            <source
+              media="(max-width: 37.5em)"
+              srcset="
+                img/logo-green-small-1x.png 1x,
+                img/logo-green-small-2x.png 2x
+              "
+            />
+            <img
+              srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+              alt="Logo"
+            />
+          </picture>
         </figure>
 
         <div class="row">
