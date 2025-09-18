@@ -20,7 +20,7 @@
       $key: $breakpoint,
     );
 
-    @media (max-width: $size) {
+    @media only screen and (max-width: $size) {
       @content;
     }
   } @else {

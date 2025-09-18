@@ -1,6 +1,6 @@
 .feature-box {
   background-color: rgba($color-white, 0.8);
-  padding: 2.5rem;
+  padding: 2rem;
   text-align: center;
   font-size: 1.5rem;
   border-radius: 0.3rem;
@@ -8,7 +8,7 @@
   transition: transform 0.3s;
 
   @include respond(tab-port) {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   &__icon {
