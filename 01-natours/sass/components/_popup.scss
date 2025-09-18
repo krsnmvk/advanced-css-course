@@ -1,7 +1,10 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .popup {
   width: 100vw;
   height: 100vh;
-  background-color: rgba($color-black, 0.8);
+  background-color: rgba(variables.$color-black, 0.8);
   z-index: 9;
   position: absolute;
   top: 0;
@@ -14,7 +17,7 @@
     (backdrop-filter: blur(10px)) {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background-color: rgba($color-black, 0.8);
+    background-color: rgba(variables.$color-black, 0.8);
   }
 
   &:target {
@@ -34,27 +37,27 @@
       line-height: 1;
       top: 2.5rem;
       right: 2.5rem;
-      color: $color-gray-dark;
+      color: variables.$color-gray-dark;
       text-decoration: none;
-      font-size: calc($font-default + 1.4rem);
+      font-size: calc(variables.$font-default + 1.4rem);
     }
 
     &:hover {
-      color: $color-primary;
+      color: variables.$color-primary;
     }
   }
 
   &__content {
     width: 75%;
-    background-color: $color-white;
-    box-shadow: 0 2rem 4rem 0 rgba($color-black, 0.2);
+    background-color: variables.$color-white;
+    box-shadow: 0 2rem 4rem 0 rgba(variables.$color-black, 0.2);
     display: table;
     overflow: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.5s 0.2s;
 
-    @include absCenter;
+    @include mixins.absCenter;
   }
 
   &__left {
@@ -78,10 +81,10 @@
     font-size: 1.4rem;
     column-count: 2;
     column-gap: 4rem;
-    column-rule: 1px solid $color-gray-light-2;
+    column-rule: 1px solid variables.$color-gray-light-2;
     -moz-column-count: 2;
     -moz-column-gap: 4rem;
-    -moz-column-rule: 1px solid $color-gray-light-2;
+    -moz-column-rule: 1px solid variables.$color-gray-light-2;
     hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;

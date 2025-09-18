@@ -4,7 +4,13 @@
   "description": "",
   "private": false,
   "scripts": {
-    "sass:natours": "sass 01-natours/sass/main.scss 01-natours/css/style.css -w",
+    "watch:natours": "sass 01-natours/sass/main.scss 01-natours/css/style.css -w",
+    "migrator:natours": "sass-migrator module division color --migrate-deps 01-natours/sass/main.scss",
+    "compile:natours": "sass 01-natours/sass/main.scss 01-natours/css/style.compile.css",
+    "concat:natours": "concat -o 01-natours/css/style.concat.css 01-natours/css/style.compile.css 01-natours/css/icon-font.css",
+    "prefix:natours": "postcss 01-natours/css/style.concat.css --use autoprefixer -o 01-natours/css/style.prefix.css",
+    "compress:natours": "sass 01-natours/css/style.prefix.css 01-natours/css/style.prod.css --style=compressed",
+    "build:natours": "npm-run-all migrator:natours compile:natours concat:natours prefix:natours compress:natours",
     "sass:trillo": "sass 02-trillo/sass/main.scss 02-trillo/css/style.css -w",
     "sass:nexter": "sass 03-nexter/sass/main.scss 03-nexter/css/style.css -w",
     "sass:migrator": "sass-migrator module --migrate-deps 01-natours/sass/main.scss"
@@ -22,6 +28,10 @@
   },
   "homepage": "https://github.com/krsnmvk/css-and-sass-course#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concat": "^1.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^11.0.1",
     "sass": "^1.92.1",
     "sass-migrator": "^2.4.2"
   }

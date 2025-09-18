@@ -1,3 +1,5 @@
+@use "../abstracts/variables";
+
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -14,12 +16,12 @@
     left: 0;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    box-shadow: 0.5rem 1.5rem 4rem 0 rgba($color-black, 0.15);
+    box-shadow: 0.5rem 1.5rem 4rem 0 rgba(variables.$color-black, 0.15);
     border-radius: 0.3rem;
     overflow: hidden;
 
     &--front {
-      background-color: $color-white;
+      background-color: variables.$color-white;
     }
 
     &--back {
@@ -28,24 +30,24 @@
       &-1 {
         background-image: linear-gradient(
           to right bottom,
-          $color-secondary-light,
-          $color-secondary-dark
+          variables.$color-secondary-light,
+          variables.$color-secondary-dark
         );
       }
 
       &-2 {
         background-image: linear-gradient(
           to right bottom,
-          $color-primary-light,
-          $color-primary-dark
+          variables.$color-primary-light,
+          variables.$color-primary-dark
         );
       }
 
       &-3 {
         background-image: linear-gradient(
           to right bottom,
-          $color-tertiary-light,
-          $color-tertiary-dark
+          variables.$color-tertiary-light,
+          variables.$color-tertiary-dark
         );
       }
     }
@@ -70,8 +72,8 @@
     &--1 {
       background-image: linear-gradient(
           to right top,
-          $color-secondary-light,
-          $color-secondary-dark
+          variables.$color-secondary-light,
+          variables.$color-secondary-dark
         ),
         url('../img/nat-5.jpg');
     }
@@ -79,8 +81,8 @@
     &--2 {
       background-image: linear-gradient(
           to right top,
-          $color-primary-light,
-          $color-primary-dark
+          variables.$color-primary-light,
+          variables.$color-primary-dark
         ),
         url('../img/nat-6.jpg');
     }
@@ -88,8 +90,8 @@
     &--3 {
       background-image: linear-gradient(
           to right top,
-          $color-tertiary-light,
-          $color-tertiary-dark
+          variables.$color-tertiary-light,
+          variables.$color-tertiary-dark
         ),
         url('../img/nat-7.jpg');
     }
@@ -98,7 +100,7 @@
   &__heading {
     font-size: 3.8rem;
     font-weight: 300;
-    color: $color-white;
+    color: variables.$color-white;
     position: absolute;
     top: 12rem;
     right: 2rem;
@@ -112,24 +114,24 @@
       &--1 {
         background-image: linear-gradient(
           to right bottom,
-          rgba($color-secondary-light, 0.85),
-          rgba($color-secondary-dark, 0.85)
+          rgba(variables.$color-secondary-light, 0.85),
+          rgba(variables.$color-secondary-dark, 0.85)
         );
       }
 
       &--2 {
         background-image: linear-gradient(
           to right bottom,
-          rgba($color-primary-light, 0.85),
-          rgba($color-primary-dark, 0.85)
+          rgba(variables.$color-primary-light, 0.85),
+          rgba(variables.$color-primary-dark, 0.85)
         );
       }
 
       &--3 {
         background-image: linear-gradient(
           to right bottom,
-          rgba($color-tertiary-light, 0.85),
-          rgba($color-tertiary-dark, 0.85)
+          rgba(variables.$color-tertiary-light, 0.85),
+          rgba(variables.$color-tertiary-dark, 0.85)
         );
       }
     }
@@ -149,7 +151,7 @@
         padding: 1rem;
 
         &:not(:last-child) {
-          border-bottom: 1px solid $color-gray-light-2;
+          border-bottom: 1px solid variables.$color-gray-light-2;
         }
       }
     }
@@ -166,7 +168,7 @@
 
   &__price-box {
     text-align: center;
-    color: $color-white;
+    color: variables.$color-white;
     margin-bottom: 8rem;
   }
 
@@ -184,8 +186,8 @@
   @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     border-radius: 0.3rem;
-    background-color: $color-white;
-    box-shadow: 0.5rem 1.5rem 4rem 0 rgba($color-black, 0.15);
+    background-color: variables.$color-white;
+    box-shadow: 0.5rem 1.5rem 4rem 0 rgba(variables.$color-black, 0.15);
 
     &__side {
       height: auto;
