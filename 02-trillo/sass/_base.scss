@@ -13,6 +13,14 @@ $colors: (
   grey-dark-3: #999,
 );
 
+$breakpoints: (
+  xs: 31.25em,
+  sm: 37.5em,
+  md: 56.25em,
+  lg: 68.75em,
+  xl: 75em,
+);
+
 *,
 *::before,
 *::after {
@@ -24,6 +32,10 @@ $colors: (
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @media only screen and (max-width: map-get($map: $breakpoints, $key: lg)) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -33,10 +45,10 @@ body {
   font-weight: 400;
   background-image: linear-gradient(
     to right bottom,
-    map-get($colors, primary-light),
-    map-get($colors, primary-dark)
+    map-get($map: $colors, $key: primary-light),
+    map-get($map: $colors, $key: primary-dark)
   );
   background-size: cover;
   background-repeat: no-repeat;
-  color: map-get($colors, grey-dark-2);
+  color: map-get($map: $colors, $key: grey-dark-2);
 }
