@@ -1,3 +1,4 @@
+@use "sass:map";
 $colors: (
   primary: #eb2f64,
   primary-light: #ff3366,
@@ -33,7 +34,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 
-  @media only screen and (max-width: map-get($map: $breakpoints, $key: lg)) {
+  @media only screen and (max-width: map.get($map: $breakpoints, $key: lg)) {
     font-size: 50%;
   }
 }
@@ -45,10 +46,10 @@ body {
   font-weight: 400;
   background-image: linear-gradient(
     to right bottom,
-    map-get($map: $colors, $key: primary-light),
-    map-get($map: $colors, $key: primary-dark)
+    map.get($map: $colors, $key: primary-light),
+    map.get($map: $colors, $key: primary-dark)
   );
   background-size: cover;
   background-repeat: no-repeat;
-  color: map-get($map: $colors, $key: grey-dark-2);
+  color: map.get($map: $colors, $key: grey-dark-2);
 }
