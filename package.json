@@ -11,6 +11,7 @@
     "prefix:natours": "postcss 01-natours/css/style.concat.css --use autoprefixer -o 01-natours/css/style.prefix.css",
     "compress:natours": "sass 01-natours/css/style.prefix.css 01-natours/css/style.prod.css --style=compressed",
     "build:natours": "npm-run-all migrator:natours compile:natours concat:natours prefix:natours compress:natours",
+
     "watch:trillo": "sass 02-trillo/sass/main.scss 02-trillo/css/style.css -w",
     "migrator:trillo": "sass-migrator module division color --migrate-deps 02-trillo/sass/main.scss",
     "compile:trillo": "sass 02-trillo/sass/main.scss 02-trillo/css/style.compile.css",
@@ -18,6 +19,11 @@
     "compress:trillo": "sass 02-trillo/css/style.prefix.css 02-trillo/css/style.prod.css --style=compressed",
     "build:trillo": "npm-run-all migrator:trillo compile:trillo prefix:trillo compress:trillo",
     "watch:nexter": "sass 03-nexter/sass/main.scss 03-nexter/css/style.css -w"
+
+    "sass:trillo": "sass 02-trillo/sass/main.scss 02-trillo/css/style.css -w",
+    "sass:nexter": "sass 03-nexter/sass/main.scss 03-nexter/css/style.css -w",
+    "sass:migrator": "sass-migrator module --migrate-deps 01-natours/sass/main.scss"
+
   },
   "repository": {
     "type": "git",

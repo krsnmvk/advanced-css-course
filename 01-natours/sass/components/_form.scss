@@ -1,3 +1,6 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .form {
   &__group:not(:last-child) {
     padding-bottom: 2rem;
@@ -8,7 +11,7 @@
     padding: 1.5rem 2rem;
     border: none;
     color: inherit;
-    background-color: rgba($color-white, 0.5);
+    background-color: rgba(variables.$color-white, 0.5);
     border-radius: 0.3rem;
     font-family: inherit;
     transition: all 0.2s;
@@ -16,18 +19,22 @@
     width: 100%;
     display: block;
 
+    @include mixins.respond(tab-port) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
-      box-shadow: 0 1rem 2rem 0 rgba($color-black, 0.1);
-      border-bottom: 0.3rem solid $color-primary;
+      box-shadow: 0 1rem 2rem 0 rgba(variables.$color-black, 0.1);
+      border-bottom: 0.3rem solid variables.$color-primary;
 
       &:invalid {
-        border-bottom: 0.3rem solid $color-secondary-dark;
+        border-bottom: 0.3rem solid variables.$color-secondary-dark;
       }
     }
 
     &::-webkit-input-placeholder {
-      color: $color-gray-dark-2;
+      color: variables.$color-gray-dark-2;
     }
   }
 
@@ -48,6 +55,11 @@
   &__radio-group {
     width: 49%;
     display: inline-block;
+
+    @include mixins.respond(tab-port) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   }
 
   &__radio-label {
@@ -61,7 +73,7 @@
     height: 3rem;
     width: 3rem;
     display: inline-block;
-    border: 3px solid $color-primary;
+    border: 3px solid variables.$color-primary;
     border-radius: 50%;
     top: -0.3rem;
     left: 0;
@@ -76,7 +88,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: $color-primary;
+      background-color: variables.$color-primary;
       opacity: 0;
       transition: opacity 0.2s;
     }

@@ -1,3 +1,5 @@
+@use "../abstracts/mixins";
+
 .u-center-text {
   text-align: center !important;
 }
@@ -8,6 +10,10 @@
 
 .u-margin-botton-sm {
   margin-bottom: 4rem !important;
+
+  @include mixins.respond(tab-port) {
+    margin-bottom: 3rem !important;
+  }
 }
 
 .u-margin-botton-md {
@@ -16,6 +22,10 @@
 
 .u-margin-botton-lg {
   margin-bottom: 8rem !important;
+
+  @include mixins.respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .u-margin-botton-xl {

@@ -1,3 +1,6 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 *,
 *::after,
 *::before {
@@ -8,9 +11,26 @@
 
 html {
   font-size: 62.5%;
-  // scroll-behavior: smooth;
+
+  @include mixins.respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include mixins.respond(tab-port) {
+    font-size: 50%;
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include mixins.respond(tab-port) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: variables.$color-primary;
+  color: variables.$color-white;
 }

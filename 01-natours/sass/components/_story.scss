@@ -1,21 +1,46 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .story {
   width: 75%;
   margin: 0 auto;
-  background-color: rgba($color-white, 0.6);
+  background-color: rgba(variables.$color-white, 0.6);
   padding: 6rem;
   padding-left: 9rem;
   border-radius: 0.3rem;
-  box-shadow: 0.5rem 3rem 6rem 0 rgba($color-black, 0.1);
+  box-shadow: 0.5rem 3rem 6rem 0 rgba(variables.$color-black, 0.1);
   transform: skewX(-12deg);
+
+  @include mixins.respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include mixins.respond(phone) {
+    transform: skewX(0);
+  }
 
   &__shape {
     width: 15rem;
     height: 15rem;
     float: left;
-    shape-outside: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+    border-radius: 50%;
+    overflow: hidden;
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      shape-outside: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+      border-radius: none;
+    }
+
+    @include mixins.respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
 
   &__img {
@@ -27,6 +52,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include mixins.respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {
@@ -37,7 +66,7 @@
     transform: translate(-50%, 20%);
     text-transform: uppercase;
     font-size: 1.7rem;
-    color: $color-white;
+    color: variables.$color-white;
     opacity: 0;
     transition: all 0.3s;
     backface-visibility: hidden;
