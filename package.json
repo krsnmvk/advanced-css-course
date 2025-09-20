@@ -4,10 +4,12 @@
   "description": "",
   "private": false,
   "scripts": {
-    "sass:natours": "sass 01-natours/sass/main.scss 01-natours/css/style.css -w",
-    "sass:trillo": "sass 02-trillo/sass/main.scss 02-trillo/css/style.css -w",
-    "sass:nexter": "sass 03-nexter/sass/main.scss 03-nexter/css/style.css -w",
-    "sass:migrator": "sass-migrator module --migrate-deps 01-natours/sass/main.scss"
+    "watch:nexter": "sass 03-nexter/sass/main.scss 03-nexter/css/style.css -w",
+    "migrator:nexter": "sass-migrator module division color --migrate-deps 03-nexter/sass/main.scss",
+    "compile:nexter": "sass 03-nexter/sass/main.scss 03-nexter/css/style.compile.css",
+    "prefix:nexter": "postcss 03-nexter/css/style.compile.css --use autoprefixer -o 03-nexter/css/style.prefix.css",
+    "compress:nexter": "sass 03-nexter/css/style.prefix.css 03-nexter/css/style.prod.css --style=compressed",
+    "build:nexter": "npm-run-all migrator:nexter compile:nexter prefix:nexter compress:nexter"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,10 @@
   },
   "homepage": "https://github.com/krsnmvk/css-and-sass-course#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concat": "^1.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^11.0.1",
     "sass": "^1.92.1",
     "sass-migrator": "^2.4.2"
   }
