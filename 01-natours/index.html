@@ -9,8 +9,11 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/icon-font.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/icon-font.css" />
+    <link rel="stylesheet" href="css/style.css" /> -->
+
+    <link rel="stylesheet" href="css/style.prod.css" />
+
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
     <title>Natours | Exciting tours for adventurous people</title>
@@ -99,16 +102,24 @@
           <div class="col-1-of-2">
             <div class="composition">
               <img
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
                 src="img/nat-1-large.jpg"
                 alt="Photo 1"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 class="composition__photo composition__photo--p1"
-              /><img
+              />
+              <img
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
                 src="img/nat-2-large.jpg"
                 alt="Photo 2"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 class="composition__photo composition__photo--p2"
-              /><img
+              />
+              <img
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
                 src="img/nat-3-large.jpg"
                 alt="Photo 3"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 class="composition__photo composition__photo--p3"
               />
             </div>
@@ -293,7 +304,7 @@
             </figure>
             <div class="story__text">
               <h3 class="heading-tertiary u-margin-botton-xs">
-                wow! my life is completely different now
+                i had the best week ever with my family
               </h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -306,22 +317,24 @@
           </div>
         </div>
 
-        <div class="story">
-          <figure class="story__shape">
-            <img src="img/nat-9.jpg" alt="" class="story__img" />
-            <figcaption class="story__caption">Jack Wilson</figcaption>
-          </figure>
-          <div class="story__text">
-            <h3 class="heading-tertiary u-margin-botton-xs">
-              i had the best week ever with my family
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-              fugit consequuntur error, et suscipit ducimus perspiciatis
-              explicabo quisquam accusamus, quo, quam iusto. Nisi illo ea quos
-              autem deleniti repudiandae minus officiis, eaque, illum fugiat cum
-              ad pariatur repellendus numquam voluptatum.
-            </p>
+        <div class="row">
+          <div class="story">
+            <figure class="story__shape">
+              <img src="img/nat-9.jpg" alt="" class="story__img" />
+              <figcaption class="story__caption">Jack Wilson</figcaption>
+            </figure>
+            <div class="story__text">
+              <h3 class="heading-tertiary u-margin-botton-xs">
+                wow! my life is completely different now
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus fugit consequuntur error, et suscipit ducimus
+                perspiciatis explicabo quisquam accusamus, quo, quam iusto. Nisi
+                illo ea quos autem deleniti repudiandae minus officiis, eaque,
+                illum fugiat cum ad pariatur repellendus numquam voluptatum.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -402,7 +415,20 @@
 
       <footer class="footer">
         <figure class="footer__logo-box u-margin-botton-lg">
-          <img src="img/logo-green-2x.png" alt="Logo" class="footer__logo" />
+          <picture class="footer__logo">
+            <source
+              media="(max-width: 37.5em)"
+              srcset="
+                img/logo-green-small-1x.png 1x,
+                img/logo-green-small-2x.png 2x
+              "
+            />
+            <img
+              srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+              src="img/logo-green-2x.png"
+              alt="Logo"
+            />
+          </picture>
         </figure>
 
         <div class="row">
