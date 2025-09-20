@@ -11,7 +11,7 @@
     "prefix:natours": "postcss 01-natours/css/style.concat.css --use autoprefixer -o 01-natours/css/style.prefix.css",
     "compress:natours": "sass 01-natours/css/style.prefix.css 01-natours/css/style.prod.css --style=compressed",
     "build:natours": "npm-run-all migrator:natours compile:natours concat:natours prefix:natours compress:natours",
-    
+
     "watch:trillo": "sass 02-trillo/sass/main.scss 02-trillo/css/style.css -w",
     "migrator:trillo": "sass-migrator module division color --migrate-deps 02-trillo/sass/main.scss",
     "compile:trillo": "sass 02-trillo/sass/main.scss 02-trillo/css/style.compile.css",
