@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "variables";
+
 @mixin clearfix {
   &::after {
     content: '';
@@ -11,4 +14,19 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin respond($breakpoint) {
+  @if map.has-key($map: variables.$breakpoints, $key: $breakpoint) {
+    $size: map.get(
+      $map: variables.$breakpoints,
+      $key: $breakpoint,
+    );
+
+    @media only screen and (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{breakpoint}` not found in `$breakpoints` map.";
+  }
 }
