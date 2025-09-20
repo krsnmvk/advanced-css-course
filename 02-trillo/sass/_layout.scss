@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "base";
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -5,21 +8,37 @@
   box-shadow: 0 2rem 6rem 0 rgba(0, 0, 0, 0.3);
   min-height: 50rem;
 
+  @media only screen and (max-width: map.get($map: base.$breakpoints, $key: xl)) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
   .header {
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: 1px solid map-get($map: $colors, $key: grey-light-2);
+    border-bottom: 1px solid map.get($map: base.$colors, $key: grey-light-2);
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (max-width: map.get($map: base.$breakpoints, $key: xs)) {
+      flex-wrap: wrap;
+      align-content: space-around;
+      height: 10rem;
+    }
   }
 
   .content {
     display: flex;
 
+    @media only screen and (max-width: map.get($map: base.$breakpoints, $key: md)) {
+      flex-direction: column;
+    }
+
     .sidebar {
-      background-color: map-get($map: $colors, $key: grey-dark-1);
+      background-color: map.get($map: base.$colors, $key: grey-dark-1);
       flex: 0 0 18%;
       display: flex;
       flex-direction: column;
@@ -35,10 +54,18 @@
 .detail {
   display: flex;
   padding: 4.5rem;
-  background-color: map-get($map: $colors, $key: grey-light-1);
-  border-bottom: 1ox solid map-get($map: $colors, $key: grey-light-2);
+  background-color: map.get($map: base.$colors, $key: grey-light-1);
+  border-bottom: 1ox solid map.get($map: base.$colors, $key: grey-light-2);
   font-size: 1.4rem;
   gap: 4.5rem;
+
+  @media only screen and (max-width: map.get($map: base.$breakpoints, $key: md)) {
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: map.get($map: base.$breakpoints, $key: sm)) {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -47,6 +74,16 @@
   border-radius: 0.3rem;
   box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.06);
   flex: 0 0 60%;
+  margin-right: 4.5rem;
+
+  @media only screen and (max-width: map.get($map: base.$breakpoints, $key: md)) {
+    padding: 2rem;
+    margin-right: 0;
+  }
+
+  @media only screen and (max-width: map.get($map: base.$breakpoints, $key: sm)) {
+    margin-right: 0;
+  }
 }
 
 .user-reviews {
