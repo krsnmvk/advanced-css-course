@@ -42,6 +42,9 @@
 }
 
 .heading-5 {
+  @extend %heading;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 .heading-6 {
