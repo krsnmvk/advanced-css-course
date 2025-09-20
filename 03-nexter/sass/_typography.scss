@@ -7,9 +7,25 @@
 }
 
 .heading-2 {
+  @extend %heading;
+  font-style: italic;
+  font-size: 4rem;
+  line-height: 1;
+
+  &--light {
+    color: $color-grey-light-1;
+  }
+
+  &--dark {
+    color: $color-grey-dark-1;
+  }
 }
 
 .heading-3 {
+  @extend %heading;
+  color: $color-primary;
+  font-size: 1.6rem;
+  text-transform: uppercase;
 }
 
 .heading-4 {
@@ -29,4 +45,37 @@
 }
 
 .heading-6 {
+}
+
+.btn {
+  color: #fff;
+  padding: 1.5rem 2rem;
+  text-transform: uppercase;
+  background-color: $color-primary;
+  border-radius: 0;
+  border: none;
+  font-family: $font-display;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1.5rem;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 3rem;
+}
+
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+.mb-xl {
+  margin-bottom: 8rem;
 }
