@@ -17,7 +17,14 @@
     "compile:trillo": "sass 02-trillo/sass/main.scss 02-trillo/css/style.compile.css",
     "prefix:trillo": "postcss 02-trillo/css/style.compile.css --use autoprefixer -o 02-trillo/css/style.prefix.css",
     "compress:trillo": "sass 02-trillo/css/style.prefix.css 02-trillo/css/style.prod.css --style=compressed",
-    "build:trillo": "npm-run-all migrator:trillo compile:trillo prefix:trillo compress:trillo"
+    "build:trillo": "npm-run-all migrator:trillo compile:trillo prefix:trillo compress:trillo",
+    
+    "watch:nexter": "sass 03-nexter/sass/main.scss 03-nexter/css/style.css -w",
+    "migrator:nexter": "sass-migrator module division color --migrate-deps 03-nexter/sass/main.scss",
+    "compile:nexter": "sass 03-nexter/sass/main.scss 03-nexter/css/style.compile.css",
+    "prefix:nexter": "postcss 03-nexter/css/style.compile.css --use autoprefixer -o 03-nexter/css/style.prefix.css",
+    "compress:nexter": "sass 03-nexter/css/style.prefix.css 03-nexter/css/style.prod.css --style=compressed",
+    "build:nexter": "npm-run-all migrator:nexter compile:nexter prefix:nexter compress:nexter"
   },
   "repository": {
     "type": "git",
