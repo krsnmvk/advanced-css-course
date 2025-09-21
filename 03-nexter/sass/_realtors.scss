@@ -1,5 +1,7 @@
+@use "base";
+
 .realtors {
-  background-color: $color-secondary;
+  background-color: base.$color-secondary;
   grid-column: col-start 7 / full-end;
   display: grid;
   align-content: center;
@@ -8,12 +10,24 @@
   row-gap: 2rem;
   justify-items: center;
 
+  @media only screen and (max-width: 50em) {
+    grid-column: 1 / -1;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;
     column-gap: 2rem;
     row-gap: 5vh;
-    align-items: center;
+    align-content: center;
+
+    @media only screen and (max-width: 50em) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @media only screen and (max-width: 37.5em) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &__img {
@@ -24,7 +38,7 @@
 
   &__sold {
     text-transform: uppercase;
-    color: $color-grey-light-2;
+    color: base.$color-grey-light-2;
     font-size: 1.2rem;
     margin-top: -0.3rem;
   }
