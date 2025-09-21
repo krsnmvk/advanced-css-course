@@ -1,7 +1,9 @@
+@use "base";
+
 .footer {
   grid-column: full-start / full-end;
   padding: 8rem;
-  background-color: $color-secondary;
+  background-color: base.$color-secondary;
 
   .nav {
     list-style: none;
@@ -13,16 +15,16 @@
     &__link:visited {
       font-size: 1.4rem;
       text-decoration: none;
-      font-family: $font-display;
+      font-family: base.$font-display;
       text-align: center;
-      color: $color-grey-light-1;
+      color: base.$color-grey-light-1;
       text-transform: uppercase;
       padding: 1.5rem;
       display: block;
       transition: all 0.2s;
 
       &:hover {
-        background-color: rgba($color-grey-light-1, 0.02);
+        background-color: rgba(base.$color-grey-light-1, 0.02);
         transform: translateY(-0.3rem);
       }
     }
@@ -30,7 +32,7 @@
 
   .copyright {
     font-size: 1.4rem;
-    color: $color-grey-light-2;
+    color: base.$color-grey-light-2;
     margin-right: auto;
     margin-left: auto;
     margin-top: 6rem;

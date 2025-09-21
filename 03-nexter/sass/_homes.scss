@@ -1,5 +1,7 @@
+@use "base";
+
 .homes {
-  color: $color-secondary;
+  color: base.$color-secondary;
   grid-column: center-start / center-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -7,7 +9,7 @@
   margin: 10rem 0;
 
   .home {
-    background-color: $color-grey-light-1;
+    background-color: base.$color-grey-light-1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 3.5rem;
@@ -20,7 +22,7 @@
 
     &__like {
       grid-area: 1 / 2 / 2 / 3;
-      fill: $color-primary;
+      fill: base.$color-primary;
       z-index: 2;
       height: 2.5rem;
       width: 2.5rem;
@@ -35,8 +37,8 @@
       transform: translateY(50%);
       z-index: 3;
       padding: 1.25rem;
-      background-color: $color-secondary;
-      color: $color-grey-light-1;
+      background-color: base.$color-secondary;
+      color: base.$color-grey-light-1;
       width: 80%;
     }
 
@@ -55,7 +57,7 @@
       align-items: center;
 
       svg {
-        fill: $color-primary;
+        fill: base.$color-primary;
         width: 2rem;
         height: 2rem;
         margin-right: 1rem;

@@ -1,5 +1,7 @@
+@use "base";
+
 .sidebar {
-  background-color: $color-primary;
+  background-color: base.$color-primary;
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
   display: flex;
@@ -15,7 +17,7 @@
   .side-btn {
     border: none;
     border-radius: 0;
-    background-color: $color-grey-light-1;
+    background-color: base.$color-grey-light-1;
     height: 0.2rem;
     width: 4.5rem;
     margin-top: 4rem;
@@ -23,7 +25,7 @@
     &::before,
     &::after {
       content: '';
-      background-color: $color-grey-light-1;
+      background-color: base.$color-grey-light-1;
       height: 0.2rem;
       width: 4.5rem;
       display: block;
