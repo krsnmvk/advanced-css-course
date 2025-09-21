@@ -288,4 +288,39 @@ body {
   grid-row: 6/8;
 }
 
+.footer {
+  grid-column: full-start/full-end;
+  padding: 8rem;
+  background-color: #101d2c;
+}
+.footer .nav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+}
+.footer .nav__link:link, .footer .nav__link:visited {
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  color: #f9f7f6;
+  text-transform: uppercase;
+  padding: 1.5rem;
+  display: block;
+  transition: all 0.2s;
+}
+.footer .nav__link:link:hover, .footer .nav__link:visited:hover {
+  background-color: rgba(249, 247, 246, 0.02);
+  transform: translateY(-0.3rem);
+}
+.footer .copyright {
+  font-size: 1.4rem;
+  color: #aaa;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 6rem;
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */
